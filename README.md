@@ -1,4 +1,4 @@
-# Word table examples
+# Java-Word-Table-Examples
 
 This repository contains examples that illustrates how to create, edit, format, and delete tables in Word documents programmatically in Java using [Syncfusion’s Java Word library](https://www.syncfusion.com/word-framework/java/word-library?utm_source=github&utm_medium=listing&utm_campaign=java-create-word-examples) (Essential DocIO) without Microsoft Word or Office interop dependencies.
 
