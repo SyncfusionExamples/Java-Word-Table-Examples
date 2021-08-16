@@ -11,7 +11,7 @@ public class DynamicTableUsingMailmerge {
 		WordDocument document = new WordDocument(getDataDir("Template.docx"), FormatType.Docx);
 		// Creates MailMergeDataTable.
 		MailMergeDataTable mailMergeDataTableStock = getMailMergeDataTableStock();
-		// Executes Mail Merge with groups.
+		// Executes Mail Merge with group.
 		document.getMailMerge().executeGroup(mailMergeDataTableStock);
 		// Saves and closes the document.
 		document.save("Result.docx", FormatType.Docx);
@@ -69,7 +69,7 @@ public class DynamicTableUsingMailmerge {
 	 * 
 	 * Gets the StockDetails.
 	 * 
-	 * @param reader The reader.
+	 * @param reader  Syncfusion's XML reader to read the XML files.
 	 */
 	private static StockDetails getStockDetails(XmlReaderSupport reader) throws Exception {
 		if (reader == null)
