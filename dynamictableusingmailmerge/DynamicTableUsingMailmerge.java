@@ -39,14 +39,19 @@ public class DynamicTableUsingMailmerge {
 		while (reader.getNodeType().getEnumValue() == XmlNodeType.Whitespace.getEnumValue())
 			reader.read();
 		// Iterates to add the stock details in list.
-		while (!(reader.getLocalName() == "StockMarket")) {
-			if (reader.getNodeType().getEnumValue() == XmlNodeType.Element.getEnumValue()) {
-				switch ((reader.getLocalName()) == null ? "string_null_value" : (reader.getLocalName())) {
-				case "StockDetails":
-					stockDetails.add(getStockDetails(reader));
-					break;
+		while (!(reader.getLocalName() == "StockMarket")) 
+		{
+			if (reader.getNodeType().getEnumValue() == XmlNodeType.Element.getEnumValue()) 
+			{
+				switch ((reader.getLocalName()) == null ? "string_null_value" : (reader.getLocalName())) 
+				{
+					case "StockDetails":
+						stockDetails.add(getStockDetails(reader));
+						break;
 				}
-			} else {
+			} 
+			else 
+			{
 				reader.read();
 				if ((reader.getLocalName() == "StockMarket")
 						&& reader.getNodeType().getEnumValue() == XmlNodeType.EndElement.getEnumValue())
@@ -77,29 +82,34 @@ public class DynamicTableUsingMailmerge {
 		while (reader.getNodeType().getEnumValue() == XmlNodeType.Whitespace.getEnumValue())
 			reader.read();
 		StockDetails stockDetails = new StockDetails();
-		while (!(reader.getLocalName() == "StockDetails")) {
-			if (reader.getNodeType().getEnumValue() == XmlNodeType.Element.getEnumValue()) {
-				switch ((reader.getLocalName()) == null ? "string_null_value" : (reader.getLocalName())) {
-				case "TradeNo":
-					stockDetails.setTradeNo(reader.readContentAsString());
-					break;
-				case "CompanyName":
-					stockDetails.setCompanyName(reader.readContentAsString());
-					break;
-				case "CostPrice":
-					stockDetails.setCostPrice(reader.readContentAsString());
-					break;
-				case "SharesCount":
-					stockDetails.setSharesCount(reader.readContentAsString());
-					break;
-				case "SalesPrice":
-					stockDetails.setSalesPrice(reader.readContentAsString());
-					break;
-				default:
-					reader.skip();
-					break;
+		while (!(reader.getLocalName() == "StockDetails")) 
+		{
+			if (reader.getNodeType().getEnumValue() == XmlNodeType.Element.getEnumValue()) 
+			{
+				switch ((reader.getLocalName()) == null ? "string_null_value" : (reader.getLocalName())) 
+				{
+					case "TradeNo":
+						stockDetails.setTradeNo(reader.readContentAsString());
+						break;
+					case "CompanyName":
+						stockDetails.setCompanyName(reader.readContentAsString());
+						break;
+					case "CostPrice":
+						stockDetails.setCostPrice(reader.readContentAsString());
+						break;
+					case "SharesCount":
+						stockDetails.setSharesCount(reader.readContentAsString());
+						break;
+					case "SalesPrice":
+						stockDetails.setSalesPrice(reader.readContentAsString());
+						break;
+					default:
+						reader.skip();
+						break;
 				}
-			} else {
+			} 
+			else 
+			{
 				reader.read();
 				if ((reader.getLocalName() == "StockDetails")
 						&& reader.getNodeType().getEnumValue() == XmlNodeType.EndElement.getEnumValue())

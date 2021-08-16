@@ -12,7 +12,8 @@ public class DynamicTable {
 		// Creates a list of employee details.
 		ListSupport<Employees> employeeDetails = getEmployeeDetails();
 		// Iterates each item in the list.
-		for (Object employee_tempObj : employeeDetails) {
+		for (Object employee_tempObj : employeeDetails) 
+		{
 			Employees employee = (Employees) employee_tempObj;
 			// Accesses the table in the document.
 			IWTable table = document.getSections().get(0).getTables().get(0);
@@ -58,16 +59,18 @@ public class DynamicTable {
 		while (reader.getNodeType() == XmlNodeType.Whitespace)
 			reader.read();
 		// Iterates to add the employee details in list.
-		while (reader.getLocalName() != "Employees") {
-			if (reader.getNodeType() == XmlNodeType.Element) {
-				switch (reader.getLocalName()) {
-				case "Employee":
-
+		while (reader.getLocalName() != "Employees") 
+		{
+			if (reader.getNodeType() == XmlNodeType.Element) 
+			{
+				switch (reader.getLocalName()) 
+				{
+					case "Employee":
 					employees.add(getEmployees(reader));
 					break;
 				}
-			} else
-
+			} 
+			else 
 			{
 				reader.read();
 				if ((reader.getLocalName() == "Employees") && reader.getNodeType() == XmlNodeType.EndElement)
@@ -94,36 +97,33 @@ public class DynamicTable {
 		while (reader.getNodeType() == XmlNodeType.Whitespace)
 			reader.read();
 		Employees employee = new Employees();
-		while (reader.getLocalName() != "Employee") {
-			if (reader.getNodeType() == XmlNodeType.Element) {
-				switch (reader.getLocalName()) {
-				case "Name":
-
-					employee.setName(reader.readContentAsString());
-					break;
-				case "Title":
-
-					employee.setTitle(reader.readContentAsString());
-					break;
-				case "Address":
-
-					employee.setAddress(reader.readContentAsString());
-					break;
-				case "HomePhone":
-
-					employee.setHomePhone(reader.readContentAsString());
-					break;
-				case "Photo":
-
-					employee.setPhoto(reader.readContentAsString());
-					break;
-				default:
-
-					reader.skip();
-					break;
+		while (reader.getLocalName() != "Employee") 
+		{
+			if (reader.getNodeType() == XmlNodeType.Element) 
+			{
+				switch (reader.getLocalName()) 
+				{
+					case "Name":
+						employee.setName(reader.readContentAsString());
+						break;
+					case "Title":
+						employee.setTitle(reader.readContentAsString());
+						break;
+					case "Address":
+						employee.setAddress(reader.readContentAsString());
+						break;
+					case "HomePhone":
+						employee.setHomePhone(reader.readContentAsString());
+						break;
+					case "Photo":
+						employee.setPhoto(reader.readContentAsString());
+						break;
+					default:
+						reader.skip();
+						break;
 				}
-			} else
-
+			} 
+			else 
 			{
 				reader.read();
 				if ((reader.getLocalName() == "Employee") && reader.getNodeType() == XmlNodeType.EndElement)

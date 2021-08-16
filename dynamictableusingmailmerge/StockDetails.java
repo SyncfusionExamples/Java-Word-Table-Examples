@@ -1,4 +1,5 @@
-public class StockDetails {
+public class StockDetails 
+{
 	private String m_tradeNo;
 	private String m_companyName;
 	private String m_costPrice;
@@ -11,7 +12,6 @@ public class StockDetails {
 	public String getTradeNo() throws Exception {
 		return m_tradeNo;
 	}
-
 	/**
 	 * Sets the trade number of the share.
 	 */
@@ -19,14 +19,12 @@ public class StockDetails {
 		m_tradeNo = value;
 		return value;
 	}
-
 	/**
 	 * Gets the company name of the share.
 	 */
 	public String getCompanyName() throws Exception {
 		return m_companyName;
 	}
-
 	/**
 	 * Sets the company name of the share.
 	 */
@@ -34,14 +32,12 @@ public class StockDetails {
 		m_companyName = value;
 		return value;
 	}
-
 	/**
 	 * Gets the cost price of the share.
 	 */
 	public String getCostPrice() throws Exception {
 		return m_costPrice;
 	}
-
 	/**
 	 * Sets the cost price of the share.
 	 */
@@ -49,14 +45,12 @@ public class StockDetails {
 		m_costPrice = value;
 		return value;
 	}
-
 	/**
 	 * Gets the total number of the share.
 	 */
 	public String getSharesCount() throws Exception {
 		return m_sharesCount;
 	}
-
 	/**
 	 * Sets the total number of the share.
 	 */
@@ -64,14 +58,12 @@ public class StockDetails {
 		m_sharesCount = value;
 		return value;
 	}
-
 	/**
 	 * Gets the sales price of the share.
 	 */
 	public String getSalesPrice() throws Exception {
 		return m_salesPrice;
 	}
-
 	/**
 	 * Sets the sales price of the share.
 	 */
@@ -79,7 +71,6 @@ public class StockDetails {
 		m_salesPrice = value;
 		return value;
 	}
-
 	/**
 	 * Initializes a new instance of the StockDetails class with the specified trade
 	 * number, company name, cost price, share count and sales price.
@@ -98,7 +89,6 @@ public class StockDetails {
 		m_sharesCount = sharesCount;
 		m_salesPrice = salesPrice;
 	}
-
 	/**
 	 * Initializes a new instance of the StockDetails class.
 	 */
