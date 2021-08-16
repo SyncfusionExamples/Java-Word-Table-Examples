@@ -84,7 +84,7 @@ public class DynamicTable {
 	 * 
 	 * Gets the employees.
 	 * 
-	 * @param reader The reader.
+	 * @param reader Syncfusion's XML reader to read the XML files..
 	 */
 	private static Employees getEmployees(XmlReaderSupport reader) throws Exception {
 		if (reader == null)
