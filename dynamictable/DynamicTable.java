@@ -16,7 +16,7 @@ public class DynamicTable {
 		{
 			// Accesses the table in the document.
 			IWTable table = document.getSections().get(0).getTables().get(0);
-			// Initializes the paragraph and add new row to the table
+			// Initializes the paragraph and add new row to the table.
 			IWParagraph paragraph = null;
 			WTableRow newRow = null;
 			newRow = table.addRow();
