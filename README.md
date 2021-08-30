@@ -22,6 +22,10 @@ You can download the jars from the Syncfusion [maven repository](https://jars.sy
 
 - [Copy table styles in Java](copytablestyles/) - Copy table styles from one Word document to another.
 
+- [Fill data in Word Table dynamically in Java](dynamictable/) - Create dynamic table in Word document.
+
+- [Fill data in Word Table dynamically using mail merge in Java](dynamictableusingmailmerge/) -Create dynamic table using mail merge in Word document.
+
 # Screenshots
 
 **Built-in table style**
