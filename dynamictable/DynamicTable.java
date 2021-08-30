@@ -12,24 +12,22 @@ public class DynamicTable {
 		// Creates a list of employee details.
 		ListSupport<Employees> employeeDetails = getEmployeeDetails();
 		// Iterates each item in the list.
-		for (Object employee_tempObj : employeeDetails) 
+		for (Employees employee : employeeDetails) 
 		{
-			Employees employee = (Employees) employee_tempObj;
 			// Accesses the table in the document.
 			IWTable table = document.getSections().get(0).getTables().get(0);
-			// Initializes the paragraph.
+			// Initializes the paragraph and add new row to the table
 			IWParagraph paragraph = null;
-			// Initializes and add new row to the table.
 			WTableRow newRow = null;
 			newRow = table.addRow();
 			// Gets the employee photo and convert that base64 string to bytes.
 			byte[] bytes = ConvertSupport.fromBase64String(employee.getPhoto());
 			ByteArrayInputStream stream = new ByteArrayInputStream(bytes);
-			int i = table.getRows().getCount();
+			int index = table.getRows().getCount();
 			// Appends the picture to the first cell.
-			table.getRows().get(i - 1).getCells().get(0).addParagraph().appendPicture(stream);
+			table.getRows().get(index - 1).getCells().get(0).addParagraph().appendPicture(stream);
 			// Appends the employee details in the second cell.
-			paragraph = table.getRows().get(i - 1).getCells().get(1).addParagraph();
+			paragraph = table.getRows().get(index - 1).getCells().get(1).addParagraph();
 			paragraph.appendText(employee.getName() + "\n" + employee.getTitle() + "\n" + employee.getAddress() + "\n"
 					+ employee.getHomePhone());
 		}
