@@ -5,10 +5,10 @@ import com.syncfusion.javahelper.system.collections.generic.ListSupport;
 import com.syncfusion.javahelper.system.io.*;
 import com.syncfusion.javahelper.system.xml.*;
 
-public class DynamicTable {
+public class WordTable{
 	public static void main(String[] args) throws Exception {
 		// Loads the template document.
-		WordDocument document = new WordDocument(getDataDir("DynamicTable_Template.docx"));
+		WordDocument document = new WordDocument(getDataDir("WordTable_Template.docx"));
 		// Creates a list of employee details.
 		ListSupport<Employees> employeeDetails = getEmployeeDetails();
 		// Iterates each item in the list.
