@@ -10,7 +10,8 @@ public class StockDetails
 	/**
 	 * Gets the trade number of the share.
 	 */
-	public String getTradeNo() {
+	public String getTradeNo() 
+	{
 		return TradeNo;
 	}
 	/**
@@ -18,14 +19,16 @@ public class StockDetails
 	 * 
 	 * @param tradeNo Trade number of the share.
 	 */
-	public void setTradeNo(String tradeNo) {
+	public void setTradeNo(String tradeNo) 
+	{
 		this.TradeNo = tradeNo;
 	}
 	@XmlElement(name = "CompanyName")
 	/**
 	 * Gets the company name of the share.
 	 */
-	public String getCompanyName() {
+	public String getCompanyName() 
+	{
 		return CompanyName;
 	}
 	/**
@@ -33,14 +36,16 @@ public class StockDetails
 	 * 
 	 * @param companyName Company name of the share.
 	 */
-	public void setCompanyName(String companyName) {
+	public void setCompanyName(String companyName) 
+	{
 		this.CompanyName = companyName;
 	}
 	@XmlElement(name = "SharesCount")
 	/**
 	 * Gets the total shares count.
 	 */
-	public String getSharesCount() {
+	public String getSharesCount() 
+	{
 		return SharesCount;
 	}
 	/**
@@ -48,14 +53,16 @@ public class StockDetails
 	 * 
 	 * @param sharesCount Total shares count.
 	 */
-	public void setSharesCount(String sharesCount) {
+	public void setSharesCount(String sharesCount) 
+	{
 		this.SharesCount = sharesCount;
 	}
 	@XmlElement(name = "CostPrice")
 	/**
 	 * Gets the cost price of the share.
 	 */
-	public String getCostPrice() {
+	public String getCostPrice() 
+	{
 		return CostPrice;
 	}
 	/**
@@ -63,14 +70,16 @@ public class StockDetails
 	 * 
 	 * @param costPrice Cost price of the share.
 	 */
-	public void setCostPrice(String costPrice) {
+	public void setCostPrice(String costPrice) 
+	{
 		this.CostPrice = costPrice;
 	}
 	@XmlElement(name = "SalesPrice")
 	/**
 	 * Gets the sales price of the share.
 	 */
-	public String getSalesPrice() {
+	public String getSalesPrice() 
+	{
 		return SalesPrice;
 	}
 	/**
@@ -78,13 +87,15 @@ public class StockDetails
 	 * 
 	 * @param salesPrice Sales price of the share.
 	 */
-	public void setSalesPrice(String salesPrice) {
+	public void setSalesPrice(String salesPrice) 
+	{
 		this.SalesPrice = salesPrice;
 	}
 	/**
 	 * Initializes a new instance of the StockDetails class.
 	 */
-	public StockDetails() throws Exception {
+	public StockDetails() 
+	{
 	}
 	/**
 	 * Initializes a new instance of the StockDetails class with the specified trade
@@ -97,7 +108,7 @@ public class StockDetails
 	 * @param salesPrice  Sales price of the share.
 	 */
 	public StockDetails(String tradeNo, String companyName, String costPrice, String sharesCount, String salesPrice)
-			throws Exception {
+	{
 		this.TradeNo = tradeNo;
 		this.CompanyName = companyName;
 		this.CostPrice = costPrice;

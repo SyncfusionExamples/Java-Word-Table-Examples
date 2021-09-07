@@ -10,7 +10,8 @@ public class Employee
 	/**
 	 * Gets the employee name.
 	 */
-	public String getName() {
+	public String getName() 
+	{
 		return Name;
 	}
 	/**
@@ -18,14 +19,16 @@ public class Employee
 	 * 
 	 * @param name Name of the employee.
 	 */
-	public void setName(String name) {
+	public void setName(String name) 
+	{
 		this.Name = name;
 	}
 	@XmlElement(name = "Title")
 	/**
 	 * Gets the designation of the employee.
 	 */
-	public String getTitle() {
+	public String getTitle() 
+	{
 		return Title;
 	}
 	/**
@@ -33,14 +36,16 @@ public class Employee
 	 * 
 	 * @param title Designation of the employee.
 	 */
-	public void setTitle(String title) {
+	public void setTitle(String title) 
+	{
 		this.Title = title;
 	}
 	@XmlElement(name = "Address")
 	/**
 	 * Gets the address of the employee.
 	 */
-	public String getAddress() {
+	public String getAddress() 
+	{
 		return Address;
 	}
 	/**
@@ -48,14 +53,16 @@ public class Employee
 	 * 
 	 * @param address Address of the employee.
 	 */
-	public void setAddress(String address) {
+	public void setAddress(String address) 
+	{
 		this.Address = address;
 	}
 	@XmlElement(name = "HomePhone")
 	/**
 	 * Gets the contact number of the employee.
 	 */
-	public String getHomePhone() {
+	public String getHomePhone() 
+	{
 		return HomePhone;
 	}
 	/**
@@ -63,14 +70,16 @@ public class Employee
 	 * 
 	 * @param homePhone Contact number of the employee.
 	 */
-	public void setHomePhone(String homePhone) {
+	public void setHomePhone(String homePhone) 
+	{
 		this.HomePhone = homePhone;
 	}
 	@XmlElement(name = "Photo")
 	/**
 	 * Gets the photo of the employee.
 	 */
-	public String getPhoto() {
+	public String getPhoto() 
+	{
 		return Photo;
 	}
 	/**
@@ -78,7 +87,8 @@ public class Employee
 	 * 
 	 * @param photo Photo of the employee.
 	 */
-	public void setPhoto(String photo) {
+	public void setPhoto(String photo)
+	{
 		this.Photo = photo;
 	}
 	/**
@@ -92,7 +102,8 @@ public class Employee
 	 * @param photo     Photo of the employee.
 	 * 
 	 */
-	public Employee(String name, String title, String address, String homePhone, String photo) {
+	public Employee(String name, String title, String address, String homePhone, String photo) 
+	{
 		this.Name = name;
 		this.Title = title;
 		this.Address = address;
@@ -102,6 +113,7 @@ public class Employee
 	/**
 	 * Initializes a new instance of the Employee class.
 	 */
-	public Employee() {
+	public Employee() 
+	{
 	}
 }

@@ -8,7 +8,8 @@ public class StockMarket
 	/**
 	 * Gets the list of stock details.
 	 */
-	public List<StockDetails> getStockDetails() {
+	public List<StockDetails> getStockDetails() 
+	{
 		return StockDetails;
 	}
 	/**
@@ -16,13 +17,15 @@ public class StockMarket
 	 * 
 	 * @param stockDetails List of stock details.
 	 */
-	public void setStockDetails(List<StockDetails> listStockDetails) {
+	public void setStockDetails(List<StockDetails> listStockDetails) 
+	{
 		this.StockDetails = listStockDetails;
 	}
 	/**
 	 * Initializes a new instance of the StockMarket class.
 	 */
-	public StockMarket() {
+	public StockMarket() 
+	{
 	}
 	/**
 	 * Initializes a new instance of the StockMarket class with specified list of
@@ -30,7 +33,8 @@ public class StockMarket
 	 * 
 	 * @param stockDetails List of stock details.
 	 */
-	public StockMarket(List<StockDetails> stockDetails) {
+	public StockMarket(List<StockDetails> stockDetails) 
+	{
 		this.StockDetails = stockDetails;
 	}
 }
