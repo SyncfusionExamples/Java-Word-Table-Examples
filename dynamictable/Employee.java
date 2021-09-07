@@ -1,5 +1,4 @@
 import javax.xml.bind.annotation.*;
-
 public class Employee 
 {
 	private String Name;
@@ -7,7 +6,6 @@ public class Employee
 	private String Address;
 	private String HomePhone;
 	private String Photo;
-
 	@XmlElement(name = "Name")
 	/**
 	 * Gets the employee name.
@@ -15,7 +13,6 @@ public class Employee
 	public String getName() {
 		return Name;
 	}
-
 	/**
 	 * Sets the employee name.
 	 * 
@@ -24,7 +21,6 @@ public class Employee
 	public void setName(String name) {
 		this.Name = name;
 	}
-
 	@XmlElement(name = "Title")
 	/**
 	 * Gets the designation of the employee.
@@ -32,7 +28,6 @@ public class Employee
 	public String getTitle() {
 		return Title;
 	}
-
 	/**
 	 * Sets the designation of the employee.
 	 * 
@@ -41,7 +36,6 @@ public class Employee
 	public void setTitle(String title) {
 		this.Title = title;
 	}
-
 	@XmlElement(name = "Address")
 	/**
 	 * Gets the address of the employee.
@@ -49,7 +43,6 @@ public class Employee
 	public String getAddress() {
 		return Address;
 	}
-
 	/**
 	 * Sets the address of the employee.
 	 * 
@@ -58,7 +51,6 @@ public class Employee
 	public void setAddress(String address) {
 		this.Address = address;
 	}
-
 	@XmlElement(name = "HomePhone")
 	/**
 	 * Gets the contact number of the employee.
@@ -66,7 +58,6 @@ public class Employee
 	public String getHomePhone() {
 		return HomePhone;
 	}
-
 	/**
 	 * Sets the contact number of the employee.
 	 * 
@@ -75,7 +66,6 @@ public class Employee
 	public void setHomePhone(String homePhone) {
 		this.HomePhone = homePhone;
 	}
-
 	@XmlElement(name = "Photo")
 	/**
 	 * Gets the photo of the employee.
@@ -83,7 +73,6 @@ public class Employee
 	public String getPhoto() {
 		return Photo;
 	}
-
 	/**
 	 * Sets the photo of the employee.
 	 * 
@@ -92,7 +81,6 @@ public class Employee
 	public void setPhoto(String photo) {
 		this.Photo = photo;
 	}
-
 	/**
 	 * Initializes a new instance of the Employee class with the specified name,
 	 * title, address, contact number and photo.
@@ -111,7 +99,6 @@ public class Employee
 		this.HomePhone = homePhone;
 		this.Photo = photo;
 	}
-
 	/**
 	 * Initializes a new instance of the Employee class.
 	 */

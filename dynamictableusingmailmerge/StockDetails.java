@@ -1,5 +1,4 @@
 import javax.xml.bind.annotation.XmlElement;
-
 public class StockDetails 
 {
 	private String TradeNo;
@@ -7,7 +6,6 @@ public class StockDetails
 	private String CostPrice;
 	private String SharesCount;
 	private String SalesPrice;
-
 	@XmlElement(name = "TradeNo")
 	/**
 	 * Gets the trade number of the share.
@@ -15,7 +13,6 @@ public class StockDetails
 	public String getTradeNo() {
 		return TradeNo;
 	}
-
 	/**
 	 * Sets the trade number of the share.
 	 * 
@@ -24,7 +21,6 @@ public class StockDetails
 	public void setTradeNo(String tradeNo) {
 		this.TradeNo = tradeNo;
 	}
-
 	@XmlElement(name = "CompanyName")
 	/**
 	 * Gets the company name of the share.
@@ -32,7 +28,6 @@ public class StockDetails
 	public String getCompanyName() {
 		return CompanyName;
 	}
-
 	/**
 	 * Sets company name of the share.
 	 * 
@@ -41,7 +36,6 @@ public class StockDetails
 	public void setCompanyName(String companyName) {
 		this.CompanyName = companyName;
 	}
-
 	@XmlElement(name = "SharesCount")
 	/**
 	 * Gets the total shares count.
@@ -49,7 +43,6 @@ public class StockDetails
 	public String getSharesCount() {
 		return SharesCount;
 	}
-
 	/**
 	 * Sets the total shares count.
 	 * 
@@ -58,7 +51,6 @@ public class StockDetails
 	public void setSharesCount(String sharesCount) {
 		this.SharesCount = sharesCount;
 	}
-
 	@XmlElement(name = "CostPrice")
 	/**
 	 * Gets the cost price of the share.
@@ -66,7 +58,6 @@ public class StockDetails
 	public String getCostPrice() {
 		return CostPrice;
 	}
-
 	/**
 	 * Sets the cost price of the share.
 	 * 
@@ -75,7 +66,6 @@ public class StockDetails
 	public void setCostPrice(String costPrice) {
 		this.CostPrice = costPrice;
 	}
-
 	@XmlElement(name = "SalesPrice")
 	/**
 	 * Gets the sales price of the share.
@@ -83,7 +73,6 @@ public class StockDetails
 	public String getSalesPrice() {
 		return SalesPrice;
 	}
-
 	/**
 	 * Sets the sales price of the share.
 	 * 
@@ -92,13 +81,11 @@ public class StockDetails
 	public void setSalesPrice(String salesPrice) {
 		this.SalesPrice = salesPrice;
 	}
-
 	/**
 	 * Initializes a new instance of the StockDetails class.
 	 */
 	public StockDetails() throws Exception {
 	}
-
 	/**
 	 * Initializes a new instance of the StockDetails class with the specified trade
 	 * number, company name, cost price, share count and sales price.
