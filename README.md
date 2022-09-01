@@ -1,12 +1,12 @@
-# Java-Word-Table-Examples
+# Java Word Table Examples
 
-This repository contains examples that illustrates how to create, edit, format, and delete tables in Word documents programmatically in Java using [Syncfusion’s Java Word library](https://www.syncfusion.com/word-framework/java/word-library?utm_source=github&utm_medium=listing&utm_campaign=java-create-word-examples) (Essential DocIO) without Microsoft Word or Office interop dependencies.
+This repository contains examples that illustrates how to create, edit, format, and delete tables in Word documents programmatically in Java using [Syncfusion’s Java Word library](https://www.syncfusion.com/document-processing/word-framework/java/word-library?utm_source=github&utm_medium=listing&utm_campaign=java-create-word-examples) (Essential DocIO) without Microsoft Word or Office interop dependencies.
 
 # Tables in Word documents
 
 You can create, edit, and format simple and nested tables in a Word document. Polish the appearance of tables by applying table styles and conditional formats.
 
-The Syncfusion [Java Word library](https://www.syncfusion.com/word-framework/java/word-library?utm_source=github&utm_medium=listing&utm_campaign=java-create-word-examples) (Essential DocIO) provides comprehensive APIs to create, edit, format, and delete both simple and nested tables in Word documents programmatically in Java and VB.NET. It allows you to customize look of the tables by merging cells, adding or deleting columns or rows, or applying borders, enabling or disabling header rows to repeat on each page or row to break across pages. It generates professional reports with tabular data faster in a batch process without Microsoft Word or Office interop dependencies. The generated reports can be saved as a Word document, HTML, and more.
+The Syncfusion [Java Word library](https://www.syncfusion.com/document-processing/word-framework/java/word-library?utm_source=github&utm_medium=listing&utm_campaign=java-create-word-examples) (Essential DocIO) provides comprehensive APIs to create, edit, format, and delete both simple and nested tables in Word documents programmatically in Java and VB.NET. It allows you to customize look of the tables by merging cells, adding or deleting columns or rows, or applying borders, enabling or disabling header rows to repeat on each page or row to break across pages. It generates professional reports with tabular data faster in a batch process without Microsoft Word or Office interop dependencies. The generated reports can be saved as a Word document, HTML, and more.
 
 ## Jar files
 
@@ -42,7 +42,7 @@ You can download the jars from the Syncfusion [maven repository](https://jars.sy
 
 # Resources
 
-- **Product page:** [Syncfusion Java Word Framework](https://www.syncfusion.com/word-framework/java?utm_source=github&utm_medium=listing&utm_campaign=java-create-word-examples)
+- **Product page:** [Syncfusion Java Word Framework](https://www.syncfusion.com/document-processing/word-framework/java?utm_source=github&utm_medium=listing&utm_campaign=java-create-word-examples)
 
 - **Documentation:** [Tables in Word document using Syncfusion Java Word library](https://help.syncfusion.com/java-file-formats/word-library/working-with-tables)
 
