@@ -1,25 +1,32 @@
 import java.io.*;
+import java.util.List;
+import javax.xml.bind.*;
 import com.syncfusion.docio.*;
 import com.syncfusion.javahelper.system.*;
-import com.syncfusion.javahelper.system.collections.generic.ListSupport;
-import com.syncfusion.javahelper.system.io.*;
-import com.syncfusion.javahelper.system.xml.*;
 
-public class WordTable{
-	public static void main(String[] args) throws Exception {
+public class WordTable
+{
+	public static void main(String[] args) throws Exception 
+	{
+		// Loads the XML file.
+		File file = new File(getDataDir("EmployeesList.xml"));
+		// Create a new instance for the JAXBContext.
+		JAXBContext jaxbContext = JAXBContext.newInstance(Employees.class);
+		// Reads the XML file.
+		Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
+		Employees employees = (Employees) jaxbUnmarshaller.unmarshal(file);
+		// Gets the list of employee details.
+		List<Employee> employeeList = employees.getEmployees();
 		// Loads the template document.
 		WordDocument document = new WordDocument(getDataDir("WordTable_Template.docx"));
-		// Creates a list of employee details.
-		ListSupport<Employees> employeeDetails = getEmployeeDetails();
 		// Iterates each item in the list.
-		for (Employees employee : employeeDetails) 
+		for (Employee employee : employeeList) 
 		{
 			// Accesses the table in the document.
 			IWTable table = document.getSections().get(0).getTables().get(0);
 			// Initializes the paragraph and add new row to the table.
 			IWParagraph paragraph = null;
-			WTableRow newRow = null;
-			newRow = table.addRow();
+			table.addRow();
 			// Gets the employee photo and convert that base64 string to bytes.
 			byte[] bytes = ConvertSupport.fromBase64String(employee.getPhoto());
 			ByteArrayInputStream stream = new ByteArrayInputStream(bytes);
@@ -34,101 +41,6 @@ public class WordTable{
 		// Saves and closes the document.
 		document.save("Result.docx");
 		document.close();
-	}
-
-	/**
-	 * 
-	 * Gets the list of employee details.
-	 * 
-	 */
-	private static ListSupport<Employees> getEmployeeDetails() throws Exception {
-		// Gets list of employee details.
-		ListSupport<Employees> employees = new ListSupport<Employees>(Employees.class);
-		// Reads the xml document.
-		FileStreamSupport fs = new FileStreamSupport(getDataDir("EmployeesList.xml"), FileMode.Open, FileAccess.Read);
-		XmlReaderSupport reader = XmlReaderSupport.create(fs);
-		if (reader == null)
-			throw new Exception("reader");
-		while (reader.getNodeType() != XmlNodeType.Element)
-			reader.read();
-		if (reader.getLocalName() != "Employees")
-			throw new Exception(StringSupport.concat("Unexpected xml tag ", reader.getLocalName()));
-		reader.read();
-		while (reader.getNodeType() == XmlNodeType.Whitespace)
-			reader.read();
-		// Iterates to add the employee details in list.
-		while (reader.getLocalName() != "Employees") 
-		{
-			if (reader.getNodeType() == XmlNodeType.Element) 
-			{
-				switch (reader.getLocalName()) 
-				{
-					case "Employee":
-					employees.add(getEmployees(reader));
-					break;
-				}
-			} 
-			else 
-			{
-				reader.read();
-				if ((reader.getLocalName() == "Employees") && reader.getNodeType() == XmlNodeType.EndElement)
-					break;
-			}
-		}
-		return employees;
-	}
-
-	/**
-	 * 
-	 * Gets the employees.
-	 * 
-	 * @param reader Syncfusion's XML reader to read the XML files..
-	 */
-	private static Employees getEmployees(XmlReaderSupport reader) throws Exception {
-		if (reader == null)
-			throw new Exception("reader");
-		while (reader.getNodeType() != XmlNodeType.Element)
-			reader.read();
-		if (reader.getLocalName() != "Employee")
-			throw new Exception(StringSupport.concat("Unexpected xml tag ", reader.getLocalName()));
-		reader.read();
-		while (reader.getNodeType() == XmlNodeType.Whitespace)
-			reader.read();
-		Employees employee = new Employees();
-		while (reader.getLocalName() != "Employee") 
-		{
-			if (reader.getNodeType() == XmlNodeType.Element) 
-			{
-				switch (reader.getLocalName()) 
-				{
-					case "Name":
-						employee.setName(reader.readContentAsString());
-						break;
-					case "Title":
-						employee.setTitle(reader.readContentAsString());
-						break;
-					case "Address":
-						employee.setAddress(reader.readContentAsString());
-						break;
-					case "HomePhone":
-						employee.setHomePhone(reader.readContentAsString());
-						break;
-					case "Photo":
-						employee.setPhoto(reader.readContentAsString());
-						break;
-					default:
-						reader.skip();
-						break;
-				}
-			} 
-			else 
-			{
-				reader.read();
-				if ((reader.getLocalName() == "Employee") && reader.getNodeType() == XmlNodeType.EndElement)
-					break;
-			}
-		}
-		return employee;
 	}
 
 	/**

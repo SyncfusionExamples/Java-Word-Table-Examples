@@ -1,75 +1,101 @@
+import javax.xml.bind.annotation.XmlElement;
 public class StockDetails 
 {
-	private String m_tradeNo;
-	private String m_companyName;
-	private String m_costPrice;
-	private String m_sharesCount;
-	private String m_salesPrice;
-
+	private String TradeNo;
+	private String CompanyName;
+	private String CostPrice;
+	private String SharesCount;
+	private String SalesPrice;
+	@XmlElement(name = "TradeNo")
 	/**
 	 * Gets the trade number of the share.
 	 */
-	public String getTradeNo() throws Exception {
-		return m_tradeNo;
+	public String getTradeNo() 
+	{
+		return TradeNo;
 	}
 	/**
 	 * Sets the trade number of the share.
+	 * 
+	 * @param tradeNo Trade number of the share.
 	 */
-	public String setTradeNo(String value) throws Exception {
-		m_tradeNo = value;
-		return value;
+	public void setTradeNo(String tradeNo) 
+	{
+		this.TradeNo = tradeNo;
 	}
+	@XmlElement(name = "CompanyName")
 	/**
 	 * Gets the company name of the share.
 	 */
-	public String getCompanyName() throws Exception {
-		return m_companyName;
+	public String getCompanyName() 
+	{
+		return CompanyName;
 	}
 	/**
-	 * Sets the company name of the share.
+	 * Sets company name of the share.
+	 * 
+	 * @param companyName Company name of the share.
 	 */
-	public String setCompanyName(String value) throws Exception {
-		m_companyName = value;
-		return value;
+	public void setCompanyName(String companyName) 
+	{
+		this.CompanyName = companyName;
 	}
+	@XmlElement(name = "SharesCount")
+	/**
+	 * Gets the total shares count.
+	 */
+	public String getSharesCount() 
+	{
+		return SharesCount;
+	}
+	/**
+	 * Sets the total shares count.
+	 * 
+	 * @param sharesCount Total shares count.
+	 */
+	public void setSharesCount(String sharesCount) 
+	{
+		this.SharesCount = sharesCount;
+	}
+	@XmlElement(name = "CostPrice")
 	/**
 	 * Gets the cost price of the share.
 	 */
-	public String getCostPrice() throws Exception {
-		return m_costPrice;
+	public String getCostPrice() 
+	{
+		return CostPrice;
 	}
 	/**
 	 * Sets the cost price of the share.
+	 * 
+	 * @param costPrice Cost price of the share.
 	 */
-	public String setCostPrice(String value) throws Exception {
-		m_costPrice = value;
-		return value;
+	public void setCostPrice(String costPrice) 
+	{
+		this.CostPrice = costPrice;
 	}
-	/**
-	 * Gets the total number of the share.
-	 */
-	public String getSharesCount() throws Exception {
-		return m_sharesCount;
-	}
-	/**
-	 * Sets the total number of the share.
-	 */
-	public String setSharesCount(String value) throws Exception {
-		m_sharesCount = value;
-		return value;
-	}
+	@XmlElement(name = "SalesPrice")
 	/**
 	 * Gets the sales price of the share.
 	 */
-	public String getSalesPrice() throws Exception {
-		return m_salesPrice;
+	public String getSalesPrice() 
+	{
+		return SalesPrice;
 	}
 	/**
 	 * Sets the sales price of the share.
+	 * 
+	 * @param salesPrice Sales price of the share.
 	 */
-	public String setSalesPrice(String value) throws Exception {
-		m_salesPrice = value;
-		return value;
+	public void setSalesPrice(String salesPrice) 
+	{
+		this.SalesPrice = salesPrice;
+	}
+	/**
+	 * Initializes a new instance of the StockDetails class.
+	 */
+	public StockDetails() 
+	{
 	}
 	/**
 	 * Initializes a new instance of the StockDetails class with the specified trade
@@ -82,16 +108,11 @@ public class StockDetails
 	 * @param salesPrice  Sales price of the share.
 	 */
 	public StockDetails(String tradeNo, String companyName, String costPrice, String sharesCount, String salesPrice)
-			throws Exception {
-		m_tradeNo = tradeNo;
-		m_companyName = companyName;
-		m_costPrice = costPrice;
-		m_sharesCount = sharesCount;
-		m_salesPrice = salesPrice;
-	}
-	/**
-	 * Initializes a new instance of the StockDetails class.
-	 */
-	public StockDetails() throws Exception {
+	{
+		this.TradeNo = tradeNo;
+		this.CompanyName = companyName;
+		this.CostPrice = costPrice;
+		this.SharesCount = sharesCount;
+		this.SalesPrice = salesPrice;
 	}
 }
